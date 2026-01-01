@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "backup-utility"
+version = "0.1.0"
+description = "Boring CLI utility for backups and archives."
+readme = "README.md"
+requires-python = ">=3.14"
+license = { text = "MIT" }
+authors = [{ name = "Landrey Smith" }]
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+backup = "backup_cli.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

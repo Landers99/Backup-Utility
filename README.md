@@ -51,3 +51,9 @@ Minimal commands:
 ## Tech Stack
 * Python: fast iteration, acceptable performance for personal use
 * UV: manage project dependencies and environment
+
+## Install
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
