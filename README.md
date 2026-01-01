@@ -10,7 +10,7 @@ This project explores reliable file backup and archiving workflows by building a
 
 ### What does it do?
 
-Core behaviors: 
+Core behaviors:
 
 * Backup (mirror or incremental copy)
   * Copy a source path -> destination path
@@ -26,7 +26,7 @@ Core behaviors:
   * Checksums optional (verify copied files)
   * Logs (human-readable + JSON)
   * Exit codes that make scripting sane
- 
+
 Minimal commands:
 
 * `backup copy <src> <dest> [--incremental|--mirror] [--exclude ...] [--dry-run] [--verify]`
@@ -47,6 +47,7 @@ Minimal commands:
   * Write temp files then atomic rename
   * Use a journal/manifest so reruns continue cleanly
   * Never leave destination in a corrupted half-state
- 
+
 ## Tech Stack
 * Python: fast iteration, acceptable performance for personal use
+* UV: manage project dependencies and environment
